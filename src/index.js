@@ -11,7 +11,11 @@ const reportRoutes = require('./routes/reports');
 
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://TU-FRONTEND.netlify.app',
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(bodyParser.json());
 
 

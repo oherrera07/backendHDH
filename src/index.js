@@ -12,7 +12,7 @@ const reportRoutes = require('./routes/reports');
 
 const app = express();
 app.use(cors({
-  origin: 'https://relaxed-quokka-6eb38c.netlify.app',
+  origin: 'https://ventashdh.netlify.app',
   credentials: true
 }));
 app.use(bodyParser.json());

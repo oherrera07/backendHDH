@@ -13,7 +13,7 @@ module.exports = async function () {
     const rounds = parseInt(process.env.BCRYPT_ROUNDS || '10', 10);
     const a1 = await Admin.findOne({ where: { username: 'admin1' } });
     if (!a1) {
-        const h = await bcrypt.hash('225588', rounds);
+        const h = await bcrypt.hash('225588', rounds); //changed pw
         await Admin.create({ username: 'admin1', password_hash: h });
     }
     const a2 = await Admin.findOne({ where: { username: 'admin2' } });
